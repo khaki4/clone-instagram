@@ -335,3 +335,4 @@ pip-selfcheck.json
 ### Project template
 
 instagram/media/
+instagram/**/migrations
