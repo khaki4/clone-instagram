@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.urls import include, path
+from django.conf.urls import url
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.generic import TemplateView
@@ -19,6 +20,7 @@ urlpatterns = [
         "users/",
         include("instagram.users.urls", namespace="users"),
     ),
+    url(r'^images/', include("instagram.images.urls", namespace="images"),),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
 ] + static(
