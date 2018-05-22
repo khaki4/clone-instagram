@@ -23,8 +23,15 @@ class Feed(APIView):
 
         sorted_list = sorted(image_list, key=lambda image: image.created_at, reverse=True)
 
-        print(sorted_list)
-
         serializer = serializers.ImageSerializer(sorted_list, many=True)
 
         return Response(serializer.data)
+
+
+class LikeImage(APIView):
+
+    def get(self, request, image_id, format=None):
+
+        print(image_id)
+
+        return Response(status=200)
