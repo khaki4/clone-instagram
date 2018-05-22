@@ -8,7 +8,7 @@ python manage.py createsuperuser
 
 ---
 
-[ ] Get user feed [GET]
+[o] Get user feed [GET]
 
 [ ] Like an Image [POST]
 
