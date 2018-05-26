@@ -7,8 +7,8 @@ from instagram.images import models as image_models
 class Notification(image_models.TimeStampedModel):
 
     TYPE_CHOIES = (
-        ('like', 'LIKE'),
-        ('commnet', 'Commnet'),
+        ('like', 'Like'),
+        ('commnet', 'Comment'),
         ('follow', 'Follow'),
     )
 
@@ -16,3 +16,10 @@ class Notification(image_models.TimeStampedModel):
     to = models.ForeignKey(user_models.User, related_name='to', on_delete=models.CASCADE)
     notification_type = models.CharField(max_length=20, choices=TYPE_CHOIES)
     image = models.ForeignKey(image_models.Image, on_delete=models.CASCADE, null=True, blank=True)
+    comment = models.TextField(null=True, blank=True)
+
+    class Meta:
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return 'From: {} - To: {}'.format(self.creator, self.to)
