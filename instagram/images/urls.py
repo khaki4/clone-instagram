@@ -20,7 +20,7 @@ urlpatterns = [
         name='unlike_image'
     ),
     url(
-        regex=r'^(?P<image_id>\w+)/comment/',
+        regex=r'^(?P<image_id>\w+)/comments/',
         view=views.CommentOnImage.as_view(),
         name='comment_image'
     ),
