@@ -9,6 +9,7 @@ django-admin startapp images
 
 python manage.py createsuperuser
 
+pipenv install django-taggit
 ---
 
 ## todo list
