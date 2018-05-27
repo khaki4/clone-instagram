@@ -15,12 +15,12 @@ urlpatterns = [
         name='feed'
     ),
     url(
-        regex=r'^(?P<image_id>[0-9]+)/like/$',
+        regex=r'^(?P<image_id>[0-9]+)/likes/$',
         view=views.LikeImage.as_view(),
         name='like_image'
     ),
     url(
-        regex=r'^(?P<image_id>[0-9]+)/unlike/$',
+        regex=r'^(?P<image_id>[0-9]+)/unlikes/$',
         view=views.UnLikeImage.as_view(),
         name='like_image'
     ),
