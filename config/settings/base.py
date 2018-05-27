@@ -68,6 +68,7 @@ THIRD_PARTY_APPS = [
     'allauth.socialaccount',
     'rest_framework', # REST framework
     'taggit', #Tags for the phots
+    'taggit_serializer', # tag serializer
 ]
 LOCAL_APPS = [
     'instagram.users.apps.UsersConfig',

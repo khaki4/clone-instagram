@@ -17,6 +17,8 @@ django-admin startapp notifications
 
 pipenv install djangorestframework-jwt
 
+pipenv install django-taggit-serializer
+
 ---
 
 ## todo list
