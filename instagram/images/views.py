@@ -7,7 +7,7 @@ from instagram.users import models as user_models
 from instagram.notifications import views as notification_views
 
 
-class Feed(APIView):
+class Images(APIView):
 
     def get(self, request, format=None):
 
@@ -36,6 +36,21 @@ class Feed(APIView):
         serializer = serializers.ImageSerializer(sorted_list, many=True)
 
         return Response(serializer.data)
+
+    def post(self, request, format=None):
+
+        user = request.user
+
+        serialize = serializers.InputImageSerializer(data=request.data)
+
+        if serialize.is_valid():
+
+            serialize.save(creator=user)
+
+            return Response(data=serialize.data, status=status.HTTP_201_CREATED)
+
+        else:
+            return Response(data=serialize.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class LikeImage(APIView):
