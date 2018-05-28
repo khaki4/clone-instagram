@@ -19,7 +19,7 @@ urlpatterns = [
     url(r'^images/', include("instagram.images.urls", namespace="images"),),
     url(r'^notifications/', include("instagram.notifications.urls", namespace="notifications"),),
     path("accounts/", include("allauth.urls")),
-    path(r'^', views.ReactAppView.as_view()),
+    url(r'^', views.ReactAppView.as_view()),
     # Your stuff: custom urls includes go here
 ] + static(
     settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
