@@ -11,7 +11,7 @@ const initialState = {
 
 // reducer
 
-const reducer = (state = initialState) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     default:
       return state;
