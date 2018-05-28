@@ -73,6 +73,7 @@ THIRD_PARTY_APPS = [
     'taggit_serializer', # tag serializer
     'rest_auth', # rest auth
     'rest_auth.registration', # enable registration
+    'corsheaders' # To accept requests form React
 ]
 LOCAL_APPS = [
     'instagram.users.apps.UsersConfig',
@@ -133,6 +134,7 @@ AUTH_PASSWORD_VALIDATORS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
