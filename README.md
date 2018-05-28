@@ -1,6 +1,9 @@
 # clone instagram
 
 ## commands
+
+### for Backend
+
 pipenv --three
 pipenv shell
 pipenv install -r requirements/local.txt
@@ -18,6 +21,10 @@ django-admin startapp notifications
 pipenv install djangorestframework-jwt
 
 pipenv install django-taggit-serializer
+
+### for Frontend
+
+pipenv install django-cors-headers
 
 ---
 
