@@ -3,6 +3,7 @@ import thunk from 'redux-thunk';
 import { routerReducer, routerMiddleware } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
 import users from './modules/users';
+import Reactotron from "ReactotronConfig";
 
 const env = process.env.NODE_ENV;
 
@@ -16,12 +17,20 @@ if (env === 'development') {
   middlewaares.push(logger);
 }
 
+let store;
+
+if (env === 'development') {
+  store = initialState =>
+    Reactotron.createStore(reducer, applyMiddleware(...middlewaares));
+} else {
+  store = initialState => createStore(reducer, applyMiddleware(...middlewaares));
+}
+
+
 const reducer = combineReducers({
   users,
   routing: routerReducer,
 });
-
-const store = initialState => createStore(reducer, applyMiddleware(...middlewaares));
 
 export { history };
 
