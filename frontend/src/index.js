@@ -6,8 +6,6 @@ import store, { history } from 'redux/configureStore'
 import 'index.css';
 import App from 'App';
 
-import 'ReactotronConfig';
-
 store.dispatch({ type: 'hello' })
 
 ReactDOM.render(
