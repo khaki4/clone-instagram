@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import store from 'redux/configureStore'
+import { ConnectedRouter } from 'react-router-redux';
+import store, { history } from 'redux/configureStore'
 import 'index.css';
 import App from 'App';
 
@@ -9,6 +10,8 @@ store.dispatch({ type: 'hello' })
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <ConnectedRouter history={history}>
+      <App />
+    </ConnectedRouter>
   </Provider>,
   document.getElementById('root'));
