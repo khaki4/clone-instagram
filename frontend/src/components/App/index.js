@@ -1,11 +1,11 @@
-import { connect } from 'react-redux';
-import container from './container';
+import { connect } from "react-redux";
+import Container from "./container";
 
 const mapStateToProps = (state, ownProps) => {
   const { user } = state;
   return {
-    isLogedin: user.isLogedin
-  }
+    isLoggedIn: user.isLoggedIn
+  };
 };
 
-export default connect(mapStateToProps)(container);
+export default connect(mapStateToProps)(Container);
