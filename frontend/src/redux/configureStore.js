@@ -4,7 +4,7 @@ import { routerReducer, routerMiddleware } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { i18nState } from 'redux-i18n';
-import users from 'redux/modules/users';
+import users from 'redux/modules/user';
 
 const env = process.env.NODE_ENV;
 
