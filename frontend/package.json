@@ -62,7 +62,8 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "extract": "i18n_extract"
+    "extract": "i18n_extract",
+    "import": "i18n_import --encoding=utf-8"
   },
   "jest": {
     "collectCoverageFrom": [

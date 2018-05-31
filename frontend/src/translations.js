@@ -1,6 +1,16 @@
 export const translations = {
-  es: {
-    "Login in": "로그인",
-    "About Us": "Sobre nosotros"
-  }
+  'es': {
+    'About Us': 'tewfwef sdfsdf',
+    'Support': '',
+    'Blog': 'wefwef',
+    'Press': '',
+    'API': '',
+    'Jobs': '',
+    'Privacy': '',
+    'Terms': '',
+    'Directory': '',
+    'Language': '',
+  },
+  'options': {
+  },
 }
