@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./styles.scss";
-import { LoginForm, SignupForm } from "components/AuthForms";
+import LoginForm from "../LoginForm";
+import SignUpForm from "../SignUpForm";
 
 const Auth = (props, context) => (
   <main className={styles.auth}>
@@ -11,7 +12,7 @@ const Auth = (props, context) => (
       <div className={`${styles.whiteBox} ${styles.formBox}`}>
         <img src={require("images/logo.png")} alt="Logo" />
         {props.action === "login" && <LoginForm />}
-        {props.action === "signup" && <SignupForm />}
+        {props.action === "signup" && <SignUpForm />}
       </div>
       <div className={styles.whiteBox}>
         {props.action === "signup" && (
