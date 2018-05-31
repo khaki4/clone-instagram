@@ -10,10 +10,11 @@ class Container extends Component {
   render() {
     const { username, password } = this.state;
     return <LoginForm
-      usernameValue={username}
-      passwordValue={password}
       handleInputChange={this._handleInputChange}
       handleSubmit={this._handleSubmit}
+      handleFacebookLogin={this._handleFacebookLogin}
+      usernameValue={username}
+      passwordValue={password}
     />
   }
   _handleInputChange = event => {
@@ -25,6 +26,9 @@ class Container extends Component {
   _handleSubmit = event => {
     event.preventDefault();
     // redux will be here
+  }
+  _handleFacebookLogin = response => {
+    console.log(response);
   }
 }
 
