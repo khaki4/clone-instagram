@@ -30,7 +30,7 @@ const facebookLogin = (access_token) => (dispatch) => {
 
 // initial state
 const initialState = {
-  isLogedin: localStorage.getItem('jwt') || false
+  isLogedin: !!localStorage.getItem('jwt')  || false
 };
 
 // reducer
